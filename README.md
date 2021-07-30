@@ -24,4 +24,6 @@ Merge sort is a sorting algorithm created by John von Neumann in 1945. Merge sor
 
 In a divide-and-conquer algorithm, the data is continually broken down into smaller elements until sorting them becomes really simple.
 
-Merge sort was the first of many sorts that use this strategy, and is still in use today in many different applications.
+Merge sort was unique for its time in that the best, worst, and average time complexity are all the same: Θ(N*log(N)). This means an almost-sorted list will take the same amount of time as a completely out-of-order list. This is acceptable because the worst-case scenario, where a sort could stand to take the most time, is as fast as a sorting algorithm can be.
+
+Merge sort also requires space. Each separation requires a temporary array, and so a merge sort would require enough space to save the whole of the input a second time. This means the worst-case space complexity of merge sort is O(N).
