@@ -27,3 +27,14 @@ In a divide-and-conquer algorithm, the data is continually broken down into smal
 Merge sort was unique for its time in that the best, worst, and average time complexity are all the same: Θ(N*log(N)). This means an almost-sorted list will take the same amount of time as a completely out-of-order list. This is acceptable because the worst-case scenario, where a sort could stand to take the most time, is as fast as a sorting algorithm can be.
 
 Merge sort also requires space. Each separation requires a temporary array, and so a merge sort would require enough space to save the whole of the input a second time. This means the worst-case space complexity of merge sort is O(N).
+
+## 4 Quicksort
+Quicksort uses a divide and conquer strategy, breaking the problem into smaller sub-problems until the solution is so clear there’s nothing to solve.
+
+It chooses a single pivot element from the list. Every other element is compared with the pivot, which partitions the array into three groups: a sub-array of elements smaller than the pivot, the pivot itself, a sub-array of elements greater than the pivot.
+
+Quicksort is an unusual algorithm in that the worst case runtime is O(N^2), but the average case is O(N * logN). It is typically only discussed the worst case when talking about an algorithm’s runtime, but for Quicksort it’s so uncommon that people generally refer to it as O(N * logN).
+
+If the first element is always chosen as the pivot and the data-set is sorted, this would result in a O(n^2) runtime because the partition step only reduces the problem by a single element. A random pivot element removes the possibility that any one data-set will result in a poor Big O runtime.
+
+Unlike merge sort, which requires additional memory for auxiliary arrays, quicksort is space-saving because it deploys in-place sorting. As runtime performance goes, quicksort requires more comparisons for sorting a larger input than mergesort. Like bubble sort, quicksort has a worst case runtime of O(N^2). This can happen when quicksort’s input data set comprises: pre-sorted numbers, backward-sorted numbers, or all similar elements along with a poorly chosen pivot element that produces a partition of zero or one element.
