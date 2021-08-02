@@ -28,7 +28,7 @@ Merge sort was unique for its time in that the best, worst, and average time com
 
 Merge sort also requires space. Each separation requires a temporary array, and so a merge sort would require enough space to save the whole of the input a second time. This means the worst-case space complexity of merge sort is O(N).
 
-## 4 Quicksort
+## 5 Quicksort
 Quicksort uses a divide and conquer strategy, breaking the problem into smaller sub-problems until the solution is so clear there’s nothing to solve.
 
 It chooses a single pivot element from the list. Every other element is compared with the pivot, which partitions the array into three groups: a sub-array of elements smaller than the pivot, the pivot itself, a sub-array of elements greater than the pivot.
